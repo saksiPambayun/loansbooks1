@@ -13,7 +13,6 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -100,7 +99,6 @@ body {
   font-size: 1rem;
 }
 
-/* Search Section */
 .search-section {
   max-width: 900px;
   margin: 0 auto 3rem;
@@ -159,14 +157,12 @@ body {
   transform: translateY(-2px);
 }
 
-/* Main Katalog */
 .main-katalog {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem 4rem;
 }
 
-/* Book Grid */
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -174,7 +170,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Book Card */
 .book-card {
   background: white;
   border-radius: 16px;
@@ -266,7 +261,6 @@ body {
   transform: scale(1.1);
 }
 
-/* No Results */
 .no-results {
   text-align: center;
   padding: 3rem 1rem;
@@ -298,7 +292,6 @@ body {
   display: none;
 }
 
-/* Footer */
 .footer {
   background-color: #0f172a;
   color: rgba(255, 255, 255, 0.6);
@@ -308,7 +301,6 @@ body {
   margin-top: 4rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;

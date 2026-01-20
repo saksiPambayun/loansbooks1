@@ -1,1 +1,113 @@
-c
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoansBooks - Detail Buku</title>
+    <link rel="stylesheet" href="detail.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="image/logo.png" alt="LoansBooks Logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="katalog.html">Katalog</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="#" class="btn-signin">Sign In</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Back Button Section -->
+    <div class="back-section">
+      <a href="katalog.html" class="back-btn">Kembali</a>
+    </div>
+
+    <main class="detail-container">
+      <div class="detail-card">
+        <div class="book-image-section">
+          <img
+            id="bookImage"
+            src="image/hujan.png"
+            alt="Book Cover"
+            class="book-cover"
+          />
+        </div>
+
+        <div class="book-info-section">
+          <h1 id="bookTitle" class="book-title">Hujan</h1>
+
+          <!-- Book Meta Information -->
+          <div class="book-meta">
+            <div class="meta-item">
+              <span class="meta-label">Penulis</span>
+              <span id="bookAuthor" class="meta-value">Tere Liye</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Penerbit</span>
+              <span id="bookPublisher" class="meta-value"
+                >PT Gramedia Pustaka Utama</span
+              >
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Kategori</span>
+              <span class="meta-value">Fiksi Ilmiah (sci-fi)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Tahun Terbit</span>
+              <span id="bookYear" class="meta-value">2025</span>
+            </div>
+          </div>
+
+          <!-- Book Description -->
+          <div class="book-description">
+            <h3>Deskripsi</h3>
+            <p id="bookDescription">
+              Blurb novel "Hujan" karya Tere Liye berkisah tentang Lail, gadis
+              yatim piatu di masa depan (tahun 2042) yang kehilangan orang tua
+              akibat bencana alam. Bertemu dan jatuh cinta pada Esok, sahabatnya
+              di perpusatakaan namun cerpinzah, hingga akhirnya kisah mereka
+              diuji oleh teknologi canggih dan dilema antara melupakan kenangan
+              individual atau mempertahankannya di tengah krisis iklim global
+              yang mengancam Bumi, di mana Esok menjadi kunci penyelamat umat
+              manusia.
+            </p>
+          </div>
+
+          <!-- Borrow Button -->
+          <button id="borrowBtn" class="borrow-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span id="bookPages">456 Halaman</span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      All Rights Reserved | Copyright LoansBooks by NaufalRosyadan 2008
+    </footer>
+
+    <script src="detail.js"></script>
+  </body>
+</html>

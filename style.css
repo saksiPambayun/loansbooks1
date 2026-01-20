@@ -1,16 +1,12 @@
 :root {
     --primary-color: #6200EE;
-    /* Purple similar to the image */
     --primary-hover: #4e00c2;
     --secondary-color: #9C27B0;
-    /* Accents */
     --text-dark: #1F1F1F;
     --text-light: #757575;
     --bg-color: #F8F9FB;
-    /* Light grayish/bluish background */
     --white: #FFFFFF;
     --nav-btn-bg: #111827;
-    /* Dark button for Sign In */
 }
 
 * {
@@ -26,7 +22,6 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -38,7 +33,6 @@ body {
     top: 0;
     z-index: 1000;
     background-color: var(--bg-color);
-    /* Match body background */
 }
 
 .logo {
@@ -48,12 +42,10 @@ body {
     font-weight: 700;
     font-size: 1.5rem;
     color: #1a1a2e;
-    /* Dark navy mostly */
 }
 
 .logo-icon {
     color: #5D3FD3;
-    /* Purple icon */
 }
 
 .nav-links {
@@ -61,7 +53,6 @@ body {
     gap: 2.5rem;
     list-style: none;
     align-items: center;
-    /* Vertically align items */
 }
 
 .nav-links a {
@@ -92,7 +83,6 @@ body {
     opacity: 0.9;
 }
 
-/* Hero Section */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -101,7 +91,6 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     min-height: 80vh;
-    /* Fill reasonable space */
 }
 
 .hero-content {
@@ -136,7 +125,6 @@ body {
 
 .btn-primary {
     background-color: #6C00FF;
-    /* Vibrant Purple */
     color: var(--white);
     padding: 1rem 2.5rem;
     border-radius: 50px;
@@ -178,7 +166,6 @@ body {
     filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
 }
 
-/* Hamburger Menu */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -193,7 +180,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
     .hamburger {
         display: flex;
@@ -202,10 +188,8 @@ body {
 
     .nav-links {
         display: none;
-        /* Hidden by default */
         position: absolute;
         top: 100%;
-        /* Adjust based on navbar height */
         left: 0;
         width: 100%;
         background-color: var(--white);
@@ -251,7 +235,7 @@ body {
     .hero-buttons {
         justify-content: center;
     }
-}/* Catalog Section */
+}
 .catalog {
     padding: 4rem 5%;
     max-width: 1400px;
@@ -271,7 +255,6 @@ body {
     margin-bottom: 3rem;
 }
 
-/* Book Grid */
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -280,7 +263,6 @@ body {
     justify-items: center;
 }
 
-/* Book Card */
 .book-card {
     background: var(--white);
     border-radius: 20px;
@@ -347,15 +329,12 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-right: 3rem;
-    /* Make space for button */
 }
 
-/* Arrow Button */
 .btn-book-detail {
     position: absolute;
     right: 1.5rem;
     top: 50%;
-    /* Align with text area roughly or bottom right of info? */
     bottom: 0;
     width: 40px;
     height: 40px;
@@ -366,13 +345,10 @@ body {
     align-items: center;
     color: white;
     transition: background-color 0.2s;
-    /* Adjust positioning based on design image which shows it aligned right of text */
     top: auto;
     bottom: 0;
-    /* Actually let's place it in flex/grid or absolute bottom right */
 }
 
-/* Adjusting layout for button to match image: Button is to the right of the text block */
 .book-content-row {
     display: flex;
     justify-content: space-between;
@@ -393,7 +369,6 @@ body {
     width: 40px;
     height: 40px;
     background-color: #7C3AED;
-    /* Purple */
     border-radius: 12px;
     color: white;
     box-shadow: 0 4px 6px rgba(124, 58, 237, 0.3);
@@ -410,13 +385,11 @@ body {
     padding: 1rem 3rem;
 }
 
-/* Mobile Tweak for catalog */
 @media (max-width: 600px) {
     .book-grid {
         grid-template-columns: 1fr;
     }
 }
-/* Features Section */
 .features {
     padding: 4rem 5%;
     background-color: #F9FAFB;
@@ -463,7 +436,6 @@ body {
     line-height: 1.6;
 }
 
-/* Stats Section */
 .stats-section {
     padding: 6rem 5%;
     background-color: #F8F9FB;
@@ -546,7 +518,6 @@ body {
     font-size: 0.95rem;
 }
 
-/* Footer */
 .footer {
     background-color: #0F172A;
     color: rgba(255, 255, 255, 0.6);
@@ -557,10 +528,8 @@ body {
 
 .d-purple {
     color: #111827;
-    /* Keeping the dark title style from reference */
 }
 
-/* More Responsive rules */
 @media (max-width: 1024px) {
     .stats-container {
         flex-direction: column;

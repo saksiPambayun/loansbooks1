@@ -7,7 +7,6 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// Data Katalog Buku
 const books = [
   {
     id: 1,
@@ -68,5 +67,4 @@ function renderBooks() {
     .join("");
 }
 
-// Render books when DOM is loaded
 document.addEventListener("DOMContentLoaded", renderBooks);

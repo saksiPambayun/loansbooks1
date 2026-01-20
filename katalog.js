@@ -16,8 +16,7 @@ const books = [
     id: 1,
     title: "Hujan",
     category: "Novel",
-    image:
-      "https://id-test-11.slatic.net/p/65337968507802877a5e00310243178c.jpg",
+    image: "image/hujan.png",
     description:
       "Blurb novel 'Hujan' karya Tere Liye menceritakan tentang persahabatan, cinta, dan perpisahan...",
     tag: "Tere Liye",
@@ -26,8 +25,7 @@ const books = [
     id: 2,
     title: "Hujan",
     category: "Novel",
-    image:
-      "https://id-test-11.slatic.net/p/65337968507802877a5e00310243178c.jpg",
+    image: "image/hujan.png",
     description:
       "Blurb novel 'Hujan' karya Tere Liye menceritakan tentang persahabatan, cinta, dan perpisahan...",
     tag: "Tere Liye",
@@ -36,8 +34,7 @@ const books = [
     id: 3,
     title: "Hujan",
     category: "Novel",
-    image:
-      "https://id-test-11.slatic.net/p/65337968507802877a5e00310243178c.jpg",
+    image: "image/hujan.png",
     description:
       "Blurb novel 'Hujan' karya Tere Liye menceritakan tentang persahabatan, cinta, dan perpisahan...",
     tag: "Tere Liye",
@@ -46,8 +43,7 @@ const books = [
     id: 4,
     title: "Hujan",
     category: "Novel",
-    image:
-      "https://id-test-11.slatic.net/p/65337968507802877a5e00310243178c.jpg",
+    image: "image/hujan.png",
     description:
       "Blurb novel 'Hujan' karya Tere Liye menceritakan tentang persahabatan, cinta, dan perpisahan...",
     tag: "Tere Liye",
@@ -56,8 +52,7 @@ const books = [
     id: 5,
     title: "Hujan",
     category: "Novel",
-    image:
-      "https://id-test-11.slatic.net/p/65337968507802877a5e00310243178c.jpg",
+    image: "image/hujan.png",
     description:
       "Blurb novel 'Hujan' karya Tere Liye menceritakan tentang persahabatan, cinta, dan perpisahan...",
     tag: "Tere Liye",
@@ -66,8 +61,7 @@ const books = [
     id: 6,
     title: "Hujan",
     category: "Novel",
-    image:
-      "https://id-test-11.slatic.net/p/65337968507802877a5e00310243178c.jpg",
+    image: "image/hujan.png",
     description:
       "Blurb novel 'Hujan' karya Tere Liye menceritakan tentang persahabatan, cinta, dan perpisahan...",
     tag: "Tere Liye",
@@ -76,8 +70,7 @@ const books = [
     id: 7,
     title: "Bumi",
     category: "Novel",
-    image:
-      "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/10/25/8d3b5e0e-c0a8-4f5f-b5f5-8c5e5c5e5c5e.jpg",
+    image: "image/bumi.png",
     description:
       "Petualangan Raib, Seli, dan Ali di dunia paralel yang penuh dengan misteri dan kekuatan...",
     tag: "Tere Liye",
@@ -86,7 +79,7 @@ const books = [
     id: 8,
     title: "Pulang",
     category: "Novel",
-    image: "https://cdn.gramedia.com/uploads/items/9786020822938.jpg",
+    image: "image/bumi.png",
     description:
       "Sebuah kisah tentang perjalanan pulang, melalui pertarungan demi pertarungan...",
     tag: "Tere Liye",
@@ -95,35 +88,30 @@ const books = [
     id: 9,
     title: "Bulan",
     category: "Novel",
-    image: "https://cdn.gramedia.com/uploads/items/9786020331843_Bulan.jpg",
+    image: "image/bulan.png",
     description:
       "Lanjutan kisah petualangan di dunia paralel dengan karakter Bulan yang misterius...",
     tag: "Tere Liye",
   },
 ];
 
-// Fungsi untuk render semua buku
 function renderBooks(booksToRender = books) {
   const bookGrid = document.getElementById("bookGrid");
   const noResults = document.getElementById("noResults");
 
   if (!bookGrid) return;
 
-  // Clear grid
   bookGrid.innerHTML = "";
 
-  // Check if there are books to render
   if (booksToRender.length === 0) {
     bookGrid.style.display = "none";
     noResults.classList.remove("hidden");
     return;
   }
 
-  // Show grid and hide no results
   bookGrid.style.display = "grid";
   noResults.classList.add("hidden");
 
-  // Render each book
   booksToRender.forEach((book) => {
     const bookCard = document.createElement("div");
     bookCard.className = "book-card";
@@ -158,7 +146,6 @@ function renderBooks(booksToRender = books) {
   });
 }
 
-// Fungsi untuk filter buku
 function filterBooks() {
   const searchInput = document.getElementById("searchInput");
   const categorySelect = document.getElementById("categorySelect");
@@ -178,18 +165,14 @@ function filterBooks() {
   renderBooks(filteredBooks);
 }
 
-// Event Listeners
 document.addEventListener("DOMContentLoaded", () => {
-  // Render semua buku saat halaman dimuat
   renderBooks();
 
-  // Search button
   const searchBtn = document.getElementById("searchBtn");
   if (searchBtn) {
     searchBtn.addEventListener("click", filterBooks);
   }
 
-  // Search input - Enter key
   const searchInput = document.getElementById("searchInput");
   if (searchInput) {
     searchInput.addEventListener("keyup", (e) => {
@@ -199,13 +182,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Category select
   const categorySelect = document.getElementById("categorySelect");
   if (categorySelect) {
     categorySelect.addEventListener("change", filterBooks);
   }
 
-  // Reset button
   const resetBtn = document.getElementById("resetBtn");
   if (resetBtn) {
     resetBtn.addEventListener("click", () => {
@@ -216,7 +197,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Export untuk digunakan di file lain (opsional)
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { books, renderBooks, filterBooks };
 }
