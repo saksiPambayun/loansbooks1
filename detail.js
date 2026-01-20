@@ -1,6 +1,5 @@
 console.log("LoansBooks Detail Page loaded");
 
-// Hamburger Menu Toggle
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
@@ -10,7 +9,6 @@ if (hamburger && navLinks) {
   });
 }
 
-// Data Buku Lengkap dengan Detail
 const booksData = [
   {
     id: 1,
@@ -122,24 +120,20 @@ const booksData = [
   },
 ];
 
-// Fungsi untuk mendapatkan ID dari URL
 function getBookIdFromURL() {
   const urlParams = new URLSearchParams(window.location.search);
   return parseInt(urlParams.get("id")) || 1;
 }
 
-// Fungsi untuk menampilkan detail buku
 function displayBookDetail() {
   const bookId = getBookIdFromURL();
   const book = booksData.find((b) => b.id === bookId);
 
   if (!book) {
-    // Jika buku tidak ditemukan, redirect ke katalog
     window.location.href = "katalog.html";
     return;
   }
 
-  // Update elemen HTML dengan data buku
   document.getElementById("bookImage").src = book.image;
   document.getElementById("bookImage").alt = book.title;
   document.getElementById("bookTitle").textContent = book.title;
@@ -148,17 +142,14 @@ function displayBookDetail() {
   document.getElementById("bookYear").textContent = book.year;
   document.getElementById("bookDescription").textContent = book.description;
 
-  // Update button pages
   const bookPagesSpan = document.querySelector("#bookPages");
   if (bookPagesSpan) {
     bookPagesSpan.textContent = book.pages;
   }
 
-  // Update page title
   document.title = `${book.title} - LoansBooks`;
 }
 
-// Event listener untuk tombol pinjam
 function setupBorrowButton() {
   const borrowBtn = document.getElementById("borrowBtn");
   if (borrowBtn) {
@@ -170,13 +161,11 @@ function setupBorrowButton() {
   }
 }
 
-// Initialize saat halaman dimuat
 document.addEventListener("DOMContentLoaded", () => {
   displayBookDetail();
   setupBorrowButton();
 });
 
-// Export untuk digunakan di file lain (opsional)
 if (typeof module !== "undefined" && module.exports) {
   module.exports = { booksData, displayBookDetail };
 }

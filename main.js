@@ -21,7 +21,7 @@ const books = [
     id: 2,
     title: "Bumi",
     author: "Tere Liye",
-    image: "image/hero.png",
+    image: "image/bumi.png",
     description:
       "Petualangan Raib, Seli, dan Ali di dunia paralel yang penuh dengan misteri dan kekuatan...",
     tag: "Tere Liye",
@@ -30,7 +30,7 @@ const books = [
     id: 3,
     title: "Pulang",
     author: "Tere Liye",
-    image: "image/hero.png",
+    image: "image/pulang.png",
     description:
       "Sebuah kisah tentang perjalanan pulang, melalui pertarungan demi pertarungan...",
     tag: "Tere Liye",

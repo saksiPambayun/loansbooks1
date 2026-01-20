@@ -79,7 +79,7 @@ const books = [
     id: 8,
     title: "Pulang",
     category: "Novel",
-    image: "image/bumi.png",
+    image: "image/pulang.png",
     description:
       "Sebuah kisah tentang perjalanan pulang, melalui pertarungan demi pertarungan...",
     tag: "Tere Liye",
