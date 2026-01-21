@@ -140,11 +140,17 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const ctaBtn = document.querySelector(".cta-btn");
+const ctaBtn = document.querySelector("#ctaButton");
 if (ctaBtn) {
   ctaBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    alert("Terima kasih! Fitur pendaftaran akan segera hadir. 🎉");
+
+    const confirmBox = confirm(
+      "Anda akan diarahkan ke halaman katalog buku. Lanjutkan?",
+    );
+    if (confirmBox) {
+      window.location.href = "katalog.html";
+    }
   });
 }
 
@@ -159,9 +165,9 @@ featureCards.forEach((card) => {
   });
 });
 
-console.log("📚 Welcome to LoansBooks About Page!");
-console.log("🎯 Visi: Menjadi platform peminjaman buku digital terdepan");
-console.log("🚀 Misi: Memudahkan akses literasi untuk semua");
+console.log(" Welcome to LoansBooks About Page!");
+console.log(" Visi: Menjadi platform peminjaman buku digital terdepan");
+console.log(" Misi: Memudahkan akses literasi untuk semua");
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
